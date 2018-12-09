@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link rel="stylesheet" href="vendor/css/bootstrap.css"/>
+		<link rel="stylesheet> href="css/site.css"/>
+		
+		<title>Consulta Fipe</title>
+		<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+	</head>
+	<body>		
+		<div class="jumbotron jumbotron-fluid">
+		  <div class="container">
+			<h1 class="display-4">Consulta Fipe</h1>
+			<p class="lead">Informação disponível de maneira rápida e fácil</p>
+		  </div>
+		</div>
+		<div class="container"> 
+			<!-- CONSULTAS -->		
+			<div class="col-sm-12">
+				<div class="row">		
+					<!-- CARD 1 -->
+					<div class="col-sm-4">
+						<div class="card"> 
+							<a data-toggle="collapse" href="#div-collapse-1" role="button" aria-expanded="false" aria-controls="div-collapse-1">
+								<div class="card-header"><span class="fas fa-wrench"></span>&nbsp;Fabricante</div>
+							</a>							
+							<div class="collapse" id="div-collapse-1">
+								<div class="card-body">
+									<select class="custom-select" id="fabricantes"></select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- CARD 2 -->
+					<div class="col-sm-4">
+						<div class="card"> 
+							<a data-toggle="collapse" href="#div-collapse-2" role="button" aria-expanded="false" aria-controls="div-collapse-2">
+								<div class="card-header"><span class="fas fa-car"></span>&nbsp;Veículo</div>
+							</a>							
+							<div class="collapse" id="div-collapse-2">
+								<div class="card-body">
+									<select class="custom-select" id="veiculos"></select>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<!-- CARD 3 -->
+					<div class="col-sm-4">
+						<div class="card"> 
+							<a data-toggle="collapse" href="#div-collapse-3" role="button" aria-expanded="false" aria-controls="div-collapse-3">
+								<div class="card-header b-card-header"><span class="fas fa-clipboard-list"></span>&nbsp;Modelo</div>
+							</a>							
+							<div class="collapse" id="div-collapse-3">
+								<div class="card-body">
+									<select class="custom-select" id="modelos"></select>
+								</div>								
+							</div>
+						</div>
+					</div>						
+				</div>			
+			</div>			
+			<br/>
+			<!-- RESULTADO -->								
+			<div class="modal fade" id="modalResultado" role="dialog">		
+				<div class="modal-dialog">								 
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group row">
+								<label for="resMarca" class="col-sm-2 col-form-label col-form-label-sm">Marca</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control form-control-sm" id="resMarca" readonly>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="resVeiculo" class="col-sm-2 col-form-label col-form-label-sm">Veículo</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control form-control-sm" id="resVeiculo" readonly>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="resAno" class="col-sm-2 col-form-label col-form-label-sm">Ano</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control form-control-sm" id="resAno" readonly>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="resPreco" class="col-sm-2 col-form-label col-form-label-sm">Preço</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control form-control-sm" id="resPreco" readonly>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="resCombustivel" class="col-sm-2 col-form-label col-form-label-sm">Combustível</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control form-control-sm" id="resCombustivel" readonly>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="resReferencia" class="col-sm-2 col-form-label col-form-label-sm">Referência</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control form-control-sm" id="resReferencia" readonly>
+								</div>
+							</div>						
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-sm btn-outline-info" data-dismiss="modal" onclick="jsNovaConsulta()">Nova Consulta</button>
+						</div>
+					</div>				  
+				</div>
+			</div>	
+		</div>
+	</body>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>	
+	<script src="vendor/js/bootstrap.min.js"></script>
+	<script src="js/site.js"></script>
+</html>
